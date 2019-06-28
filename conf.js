@@ -4,6 +4,20 @@ jsproxy_config({
 
   // 节点配置
   node_map: {
+    'mysite': {
+      label: '我的节点',
+      lines: [
+        'www.webtunnel.top:8443'
+      ]
+    },
+    'thissite': {
+      label: '当前站点作为代理节点',
+      lines: [
+        // 静态资源和代理接口位于同个服务器的场合
+        // 例如默认的 ip.xip.io 以及 cloudflare worker
+        location.host
+      ]
+    },
     'aliyun-hk': {
       label: '演示服务-香港节点',
       lines: [
@@ -19,14 +33,6 @@ jsproxy_config({
         'node-aliyun-sg.etherdream.com:8443'
       ]
     },
-    'mysite': {
-      label: '当前站点',
-      lines: [
-        // 静态资源和代理接口位于同个服务器的场合
-        // 例如默认的 ip.xip.io 以及 cloudflare worker
-        location.host
-      ]
-    },
     'cfworker': {
       label: 'Cloudflare Worker',
       hidden: true,
@@ -40,7 +46,7 @@ jsproxy_config({
   /**
    * 默认节点
    */
-  node_default: 'aliyun-hk',
+  node_default: 'my-site',
 
   /**
    * 加速节点
