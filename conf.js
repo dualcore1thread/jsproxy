@@ -5,7 +5,7 @@ jsproxy_config({
   // 节点配置
   node_map: {
     'mysite': {
-      label: '我的节点',
+      label: '我的节点-Russia',
       lines: [
         'www.webtunnel.top:8443'
       ]
@@ -19,7 +19,7 @@ jsproxy_config({
       ]
     },
     'aliyun-hk': {
-      label: '演示服务-香港节点',
+      label: '演示服务节点-HongKong',
       lines: [
         // 多条线路，负载均衡系统会从其中选一条
         'node-aliyun-hk-0.etherdream.com:8443',
@@ -28,17 +28,16 @@ jsproxy_config({
       ]
     },
     'aliyun-sg': {
-      label: '演示服务-新加坡节点',
+      label: '演示服务节点-Singapore',
       lines: [
         'node-aliyun-sg.etherdream.com:8443'
       ]
     },
     'cfworker': {
-      label: 'Cloudflare Worker',
-      hidden: true,
+      label: '我的节点-CloudflareWorker',
       lines: [
         // 实验中...
-        'node-cfworker.etherdream.com:8443'
+        '1.webtunnel.workers.dev:8443'
       ]
     }
   },
