@@ -46,7 +46,7 @@ jsproxy_config({
   /**
    * 默认节点
    */
-  node_default: 'my-site',
+  node_default: 'mysite',
 
   /**
    * 加速节点
